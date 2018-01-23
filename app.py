@@ -67,6 +67,8 @@ def makeYqlQuery(req):
     result = req.get("result")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
+    if city == "กรุงเทพ":
+        city = "bangkok"
     if city is None:
         return None
 
@@ -98,7 +100,7 @@ def makeWebhookResult(data):
 
     # print(json.dumps(item, indent=4))
 
-    speech = "ทดสอบภาษาไทย " + location.get('city') + ": " + condition.get('text') + \
+    speech = "ตอนนี้คุณอยู่ที่ " + location.get('city') + ": " + condition.get('text') + \
              ", And the temperature is " + condition.get('temp') + " " + units.get('temperature')
 
     print("Response:")
