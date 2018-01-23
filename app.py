@@ -99,7 +99,7 @@ def makeWebhookResult(data):
     # print(json.dumps(item, indent=4))
 
     tempF = condition.get('temp')
-    tempC = (tempF-32)/(1.8)
+    #tempC = (tempF-32)/(1.8)
 
     speech = "ตอนนี้คุณอยู่ที่ " + location.get('city') + \
              ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + units.get('temperature')
