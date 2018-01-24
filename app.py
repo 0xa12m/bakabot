@@ -96,18 +96,17 @@ def makeWebhookResult(data):
     if condition is None:
         return {}
 
-    # print(json.dumps(item, indent=4))
+    tF = condition.get('temp')
+    tC = (tF - 32)/1.8
 
-    tempF = condition.get('temp')
+    # print(json.dumps(item, indent=4))
     #float(tempC) = ( float(tempF) - 32 )/(1.8)
     
-    int(tempF)
-    tempC = tempF - 32
-    int(tempC)
+
 
 
     speech = "เมือง " + location.get('city') + \
-             ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + tempC
+             ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + tC
 
     print("Response:")
     print(speech)
