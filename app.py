@@ -103,7 +103,7 @@ def makeWebhookResult(data):
     tempC = "asdasdasdsd"
 
     speech = "เมือง " + location.get('city') + \
-             ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + units.get('temperature') + tempC
+             ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + tempC
 
     print("Response:")
     print(speech)
