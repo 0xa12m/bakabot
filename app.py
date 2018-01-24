@@ -100,7 +100,7 @@ def makeWebhookResult(data):
 
     tempF = condition.get('temp')
     #float(tempC) = ( float(tempF) - 32 )/(1.8)
-    tempC = 5.4
+    tempC = 5
 
     speech = "เมือง " + location.get('city') + \
              ", มีอุณหภูมิอยู่ที่  " + condition.get('temp') + " " + units.get('temperature') + tempC
